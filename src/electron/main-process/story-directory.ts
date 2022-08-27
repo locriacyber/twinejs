@@ -8,7 +8,8 @@ import {i18n} from './locales';
  */
 export function storyDirectoryPath() {
 	return join(
-		app.getPath('documents'),
+		app.getPath('home'),
+		'Documents',
 		i18n.t('common.appName'),
 		i18n.t('electron.storiesDirectoryName')
 	);
@@ -37,7 +38,8 @@ export async function backupStoryDirectory(maxBackups = 10) {
 	console.log('Backing up story library');
 
 	const backupPath = join(
-		app.getPath('documents'),
+		app.getPath('home'),
+		'Documents',
 		i18n.t('common.appName'),
 		i18n.t('electron.backupsDirectoryName')
 	);
